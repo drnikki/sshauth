@@ -36,7 +36,10 @@ appropriate config items. This includes the `token`, `owner`, and `team`
 
 <!-- code block fix -->
     AuthorizedKeysCommand /usr/local/sbin/sshauth
-    AuthorizedKeysCommandUser deploy
+    # On CENTOS
+    AuthorizedKeysCommandRunAs deploy
+    # On Ubuntu
+    AuthorizedKeysCommandRunAs deploy
     # or root if you're feelin' gutsy
 
 ## Notes
