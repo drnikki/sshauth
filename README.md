@@ -33,9 +33,11 @@ You need to do **4 things** to make this work
 3. Copy the `config.example` to `/etc/sshauth/config.json` and fill out the
 appropriate config items. This includes the `token`, `owner`, and `team`
 4. Edit your `/etc/ssh/sshd_config` file and add the following two stanzas.
+5. restart ssh service 
+
 
 <!-- code block fix -->
-    AuthorizedKeysCommand /usr/local/sbin/sshauth
+    AuthorizedKeysCommand /path/to/go/apps/sshauth
     # On CENTOS
     AuthorizedKeysCommandRunAs deploy
     # On Ubuntu
